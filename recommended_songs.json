@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Midnight Sky",
+        "year": 2020,
+        "artists": "['Miley Cyrus']"
+    },
+    {
+        "name": "Tinted Eyes (feat. blackbear & 24kGoldn)",
+        "year": 2020,
+        "artists": "['DVBBS', '24kGoldn', 'blackbear']"
+    },
+    {
+        "name": "Telepathy",
+        "year": 2020,
+        "artists": "['BTS']"
+    },
+    {
+        "name": "Unity",
+        "year": 2015,
+        "artists": "['TheFatRat']"
+    },
+    {
+        "name": "MORE & MORE",
+        "year": 2020,
+        "artists": "['TWICE']"
+    },
+    {
+        "name": "Love Talk - English Version",
+        "year": 2019,
+        "artists": "['WayV']"
+    },
+    {
+        "name": "Everything Black",
+        "year": 2017,
+        "artists": "['Unlike Pluto', 'Mike Taylor']"
+    },
+    {
+        "name": "Edge of Midnight (Midnight Sky Remix) (feat. Stevie Nicks)",
+        "year": 2020,
+        "artists": "['Miley Cyrus', 'Stevie Nicks']"
+    },
+    {
+        "name": "OK Not To Be OK",
+        "year": 2020,
+        "artists": "['Marshmello', 'Demi Lovato']"
+    },
+    {
+        "name": "All the Time",
+        "year": 2019,
+        "artists": "['Zara Larsson']"
+    }
+]
