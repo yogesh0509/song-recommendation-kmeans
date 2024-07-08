@@ -1,52 +1,47 @@
 [
     {
-        "name": "Midnight Sky",
-        "year": 2020,
-        "artists": "['Miley Cyrus']"
-    },
-    {
-        "name": "Tinted Eyes (feat. blackbear & 24kGoldn)",
-        "year": 2020,
-        "artists": "['DVBBS', '24kGoldn', 'blackbear']"
-    },
-    {
-        "name": "Telepathy",
-        "year": 2020,
-        "artists": "['BTS']"
-    },
-    {
-        "name": "Unity",
-        "year": 2015,
-        "artists": "['TheFatRat']"
-    },
-    {
-        "name": "MORE & MORE",
-        "year": 2020,
-        "artists": "['TWICE']"
-    },
-    {
-        "name": "Love Talk - English Version",
+        "name": "Alone, Pt. II",
         "year": 2019,
-        "artists": "['WayV']"
+        "artists": "['Alan Walker', 'Ava Max']"
     },
     {
-        "name": "Everything Black",
+        "name": "Dance Monkey",
+        "year": 2019,
+        "artists": "['Tones And I']"
+    },
+    {
+        "name": "Stay",
         "year": 2017,
-        "artists": "['Unlike Pluto', 'Mike Taylor']"
+        "artists": "['Zedd', 'Alessia Cara']"
     },
     {
-        "name": "Edge of Midnight (Midnight Sky Remix) (feat. Stevie Nicks)",
-        "year": 2020,
-        "artists": "['Miley Cyrus', 'Stevie Nicks']"
+        "name": "Starving",
+        "year": 2016,
+        "artists": "['Hailee Steinfeld', 'Grey', 'Zedd']"
     },
     {
-        "name": "OK Not To Be OK",
-        "year": 2020,
-        "artists": "['Marshmello', 'Demi Lovato']"
+        "name": "I'm Not The Only One",
+        "year": 2014,
+        "artists": "['Sam Smith']"
     },
     {
-        "name": "All the Time",
+        "name": "Thinking out Loud",
+        "year": 2014,
+        "artists": "['Ed Sheeran']"
+    },
+    {
+        "name": "Body Like A Back Road",
+        "year": 2017,
+        "artists": "['Sam Hunt']"
+    },
+    {
+        "name": "Attention",
+        "year": 2018,
+        "artists": "['Charlie Puth']"
+    },
+    {
+        "name": "Grace",
         "year": 2019,
-        "artists": "['Zara Larsson']"
+        "artists": "['Lewis Capaldi']"
     }
 ]

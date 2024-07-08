@@ -1,61 +1,42 @@
-import { Key } from "react";
+'use client';
 
-interface Song {
-  name: string;
-  artists: string;
-  year: number;
-}
+import SongCard from './components/SongCard';
+import { Key } from 'react';
 
-// Define props interface for SongCard component
-interface SongCardProps {
-  song: Song;
-}
+export default function Home() {
+  let posts = [];
+  const savedSongs = localStorage.getItem('songsData');
+  if (savedSongs) {
+    posts = JSON.parse(savedSongs);
+  }
 
-// SongCard component
-const SongCard: React.FC<SongCardProps> = ({ song }) => {
-  // Parse the artists string into an array
-  const artistsArray = JSON.parse(song.artists.replace(/'/g, '"'));
+  const chunkArray = (array: any[], size: number) => {
+    return array.reduce((acc, _, index) => {
+      if (index % size === 0) {
+        acc.push(array.slice(index, index + size));
+      }
+      return acc;
+    }, []);
+  };
+
+  // Chunking the posts array into groups of 5
+  const chunkedPosts = chunkArray(posts, 5);
 
   return (
-    <div className="max-w-xs rounded-lg overflow-hidden shadow-lg bg-spotifyGreen text-white m-4">
-      <img
-        className="w-full h-40 object-cover object-center"
-        src="https://via.placeholder.com/400x200"
-        alt="Song Cover"
-      />
-      <div className="px-6 py-4">
-        <div className="font-semibold text-lg mb-2">{song.name}</div>
-        <p className="text-sm text-spotifyBlack font-semibold mb-2">
-          {artistsArray.join(', ')}
+    <div className="flex flex-wrap justify-center">
+      {chunkedPosts.length > 0 ? (
+        chunkedPosts.map((chunk: any[], chunkIndex: Key | null | undefined) => (
+          <div key={chunkIndex} className="flex flex-wrap justify-center">
+            {chunk.map((song: any, index: number) => (
+              <SongCard key={index} value={index} song={song} />
+            ))}
+          </div>
+        ))
+      ) : (
+        <p className="text-white mt-8 text-xl font-semibold">
+          No songs found. Please add some songs to the list!
         </p>
-        <p className="text-sm text-spotifyBlack font-semibold">{song.year}</p>
-      </div>
+      )}
     </div>
   );
-};
-
-export default async function Home() {
-  const { posts } = await getData()
-  return (
-    <div className="flex flex-wrap justify-center bg-spotifyBlack">
-      {posts.map((song: any, index: Key | null | undefined) => (
-        <SongCard key={index} song={song} />
-      ))}
-    </div>
-  )
-}
-
-async function getData() {
-  const res = await fetch('http://127.0.0.1:5001/recommend');
-  const posts = await res.json();
-  console.log(posts)
-  // By returning { props: { posts } }, the component will receive `posts` as a prop at build time
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
-  }
-
-  return {
-    posts
-  }
 }
